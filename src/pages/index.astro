@@ -1,17 +1,354 @@
 ---
+import "../styles/global.css";
 
+const zakres = [
+  {
+    title: "PAX i zabudowy wnęk",
+    desc: "Czyste linie, równe fronty, spokojny efekt bez kompromisów.",
+  },
+  {
+    title: "PLATSA i przechowywanie",
+    desc: "Funkcjonalne moduły ułożone tak, by wyglądały lekko i spójnie.",
+  },
+  {
+    title: "METOD i zabudowy kuchenne",
+    desc: "Precyzja ustawienia, estetyka krawędzi i perfekcyjny detal.",
+  },
+  {
+    title: "Regulacja i poziomowanie",
+    desc: "Szafki, fronty i prowadnice dopasowane do milimetra.",
+  },
+  {
+    title: "Bezpieczeństwo mocowań",
+    desc: "Pewne osadzenie i stabilność, która daje spokój na lata.",
+  },
+];
+
+const steps = [
+  {
+    title: "Krótkie ustalenie potrzeb",
+    desc: "Szybko rozumiemy zakres i oczekiwania estetyczne.",
+  },
+  {
+    title: "Przygotowanie przestrzeni",
+    desc: "Porządek i plan pracy, by całość przebiegła płynnie.",
+  },
+  {
+    title: "Montaż i dopracowanie",
+    desc: "Składanie z dbałością o proporcje, równe linie i detale.",
+  },
+  {
+    title: "Oddanie gotowej całości",
+    desc: "Efekt końcowy, który wygląda spójnie i po prostu dobrze.",
+  },
+];
+
+const audience = [
+  "Osoby, które cenią estetykę i spójność wnętrza.",
+  "Klienci, którym zależy na spokojnym, dopracowanym efekcie.",
+  "Ci, którzy wolą mieć to zrobione raz, a dobrze.",
+];
+
+const cities = [
+  { name: "Katowice", href: "#" },
+  { name: "Gliwice", href: "#" },
+  { name: "Zabrze", href: "#" },
+];
 ---
 
-<html lang="en">
+<html lang="pl">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Montaż mebli IKEA na Śląsku | Estetyczny montaż – Katowice i okolice</title>
+		<meta
+			name="description"
+			content="Profesjonalny montaż mebli IKEA na Śląsku. Precyzyjnie, spokojnie, z naciskiem na estetykę i efekt końcowy. Katowice, Gliwice, Zabrze i okolice."
+		/>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="antialiased">
+		<header class="px-6 pt-10">
+			<div class="mx-auto flex max-w-6xl items-center justify-between">
+				<div class="text-sm uppercase tracking-[0.25em] text-[var(--muted)]">
+					NazwaFirmy
+				</div>
+				<nav class="hidden items-center gap-8 text-sm text-[var(--muted)] md:flex">
+					<a class="hover:text-[var(--ink)]" href="#zakres">Zakres prac</a>
+					<a class="hover:text-[var(--ink)]" href="#efekt">Efekt końcowy</a>
+					<a class="hover:text-[var(--ink)]" href="#jak-pracuje">Jak pracuję</a>
+					<a class="hover:text-[var(--ink)]" href="#kontakt">Kontakt</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="px-6 pt-14 md:pt-20">
+				<div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+					<div>
+						<p class="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">
+							Spokój. Porządek. Efekt.
+						</p>
+						<h1
+							class="mt-4 font-[var(--font-serif)] text-4xl leading-tight md:text-5xl lg:text-6xl"
+						>
+							Montaż mebli IKEA na Śląsku – precyzyjnie i estetycznie
+						</h1>
+						<p class="mt-5 max-w-xl text-lg text-[var(--muted)]">
+							Montaż, który wygląda jak część projektu wnętrza. Czyste linie,
+							spójne moduły i dopracowany detal – bez pośpiechu, bez chaosu.
+						</p>
+						<div class="mt-8 flex flex-wrap gap-4">
+							<a
+								href="#jak-pracuje"
+								class="inline-flex items-center justify-center rounded-full border border-[var(--ink)] px-6 py-3 text-sm uppercase tracking-[0.2em] transition hover:bg-[var(--ink)] hover:text-white"
+							>
+								Zobacz jak pracuję
+							</a>
+							<a
+								href="#kontakt"
+								class="inline-flex items-center justify-center rounded-full bg-[var(--ink)] px-6 py-3 text-sm uppercase tracking-[0.2em] text-white transition hover:bg-black"
+							>
+								Kontakt
+							</a>
+						</div>
+					</div>
+					<div class="relative overflow-hidden rounded-3xl border border-[var(--line)]">
+						<div class="absolute inset-0 bg-gradient-to-br from-white/70 via-white/20 to-black/10"></div>
+						<picture>
+							<source srcset="/images/hero.avif" type="image/avif" />
+							<img
+								src="/images/hero.avif"
+								alt="Jasne wnętrze z zabudową meblową"
+								class="h-full w-full object-cover"
+								width="1600"
+								height="1100"
+								loading="eager"
+								fetchpriority="high"
+								decoding="async"
+							/>
+						</picture>
+					</div>
+				</div>
+			</section>
+
+			<section id="zakres" class="px-6 pt-20">
+				<div class="mx-auto max-w-6xl">
+					<div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+						<div>
+							<p class="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">
+								Zakres prac
+							</p>
+							<h2 class="mt-3 font-[var(--font-serif)] text-3xl md:text-4xl">
+								Zabudowy, które wyglądają lekko i naturalnie
+							</h2>
+						</div>
+						<p class="max-w-md text-[var(--muted)]">
+							Skupienie na proporcjach, osi i detalach, które budują premium
+							wrażenie.
+						</p>
+					</div>
+					<div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+						{zakres.map((item) => (
+							<div class="rounded-2xl border border-[var(--line)] bg-white/60 p-6">
+								<h3 class="font-[var(--font-serif)] text-xl">{item.title}</h3>
+								<p class="mt-3 text-[var(--muted)]">{item.desc}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section id="efekt" class="px-6 pt-20">
+				<div class="mx-auto max-w-6xl">
+					<div class="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+						<div>
+							<p class="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">
+								Efekt końcowy
+							</p>
+							<h2 class="mt-3 font-[var(--font-serif)] text-3xl md:text-4xl">
+								To, co widać na końcu, jest najważniejsze
+							</h2>
+						</div>
+						<p class="text-lg text-[var(--muted)]">
+							Zależy mi na spokojnej estetyce i dopracowanym odbiorze całości.
+							Fronty są równe, linie czytelne, a przestrzeń uporządkowana.
+						</p>
+					</div>
+					<div class="mt-10 grid gap-6 md:grid-cols-3">
+						{[
+							{
+								src: "/images/efekt-1.avif",
+								alt: "Salon z jasną zabudową",
+							},
+							{
+								src: "/images/efekt-2.avif",
+								alt: "Garderoba z uporządkowaną przestrzenią",
+							},
+							{
+								src: "/images/efekt-3.avif",
+								alt: "Kuchnia z jasnymi frontami",
+							},
+						].map((img) => (
+							<div class="overflow-hidden rounded-2xl border border-[var(--line)] bg-white/70">
+								<picture>
+									<source srcset={img.src} type="image/avif" />
+									<img
+										src={img.src}
+										alt={img.alt}
+										class="h-full w-full object-cover"
+										width="1200"
+										height="900"
+										loading="lazy"
+										decoding="async"
+									/>
+								</picture>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section id="jak-pracuje" class="px-6 pt-20">
+				<div class="mx-auto max-w-6xl">
+					<div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+						<div>
+							<p class="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">
+								Jak wygląda montaż
+							</p>
+							<h2 class="mt-3 font-[var(--font-serif)] text-3xl md:text-4xl">
+								Cztery kroki, spokojny proces
+							</h2>
+						</div>
+						<p class="max-w-md text-[var(--muted)]">
+							Klarowna kolejność pracy daje przewidywalny rezultat.
+						</p>
+					</div>
+					<div class="mt-10 grid gap-6 md:grid-cols-2">
+						{steps.map((step, index) => (
+							<div class="flex gap-5 rounded-2xl border border-[var(--line)] bg-white/60 p-6">
+								<div class="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--ink)] text-sm">
+									{String(index + 1).padStart(2, "0")}
+								</div>
+								<div>
+									<h3 class="font-[var(--font-serif)] text-xl">{step.title}</h3>
+									<p class="mt-2 text-[var(--muted)]">{step.desc}</p>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section class="px-6 pt-20">
+				<div class="mx-auto max-w-6xl rounded-3xl border border-[var(--line)] bg-white/70 p-10">
+					<p class="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">
+						Dla kogo to jest
+					</p>
+					<h2 class="mt-3 font-[var(--font-serif)] text-3xl md:text-4xl">
+						Dla osób, które dbają o detal i spójny efekt
+					</h2>
+					<ul class="mt-6 grid gap-3 text-[var(--muted)] md:grid-cols-3">
+						{audience.map((item) => (
+							<li class="rounded-2xl border border-[var(--line)] bg-white/70 px-5 py-4">
+								{item}
+							</li>
+						))}
+					</ul>
+				</div>
+			</section>
+
+			<section class="px-6 pt-20">
+				<div class="mx-auto max-w-6xl">
+					<div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+						<div>
+							<p class="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">
+								Obszar działania
+							</p>
+							<h2 class="mt-3 font-[var(--font-serif)] text-3xl md:text-4xl">
+								Śląsk i okolice z naciskiem na jakość
+							</h2>
+						</div>
+						<a
+							href="/obszar-dzialania"
+							class="inline-flex items-center justify-center rounded-full border border-[var(--ink)] px-6 py-3 text-sm uppercase tracking-[0.2em] transition hover:bg-[var(--ink)] hover:text-white"
+						>
+							Zobacz wszystkie
+						</a>
+					</div>
+					<div class="mt-8 flex flex-wrap gap-4">
+						{cities.map((city) => (
+							<a
+								href={city.href}
+								class="rounded-full border border-[var(--line)] bg-white/70 px-6 py-3 text-sm text-[var(--muted)] transition hover:border-[var(--ink)] hover:text-[var(--ink)]"
+							>
+								{city.name}
+							</a>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section class="px-6 pt-20">
+				<div class="mx-auto max-w-6xl grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+					<div>
+						<p class="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">
+							O mnie
+						</p>
+						<h2 class="mt-3 font-[var(--font-serif)] text-3xl md:text-4xl">
+							Jedna osoba, pełna odpowiedzialność za efekt
+						</h2>
+					</div>
+					<p class="text-lg text-[var(--muted)]">
+						Pracuję samodzielnie, dzięki czemu jakość jest spójna na każdym
+						etapie. Stawiam na spokojną realizację, estetykę i porządek
+						w przestrzeni.
+					</p>
+				</div>
+			</section>
+
+			<section id="kontakt" class="px-6 py-20">
+				<div class="mx-auto max-w-6xl rounded-3xl border border-[var(--line)] bg-white/70 p-10">
+					<div class="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+						<div>
+							<p class="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">
+								Kontakt
+							</p>
+							<h2 class="mt-3 font-[var(--font-serif)] text-3xl md:text-4xl">
+								Porozmawiajmy o Twojej przestrzeni
+							</h2>
+							<p class="mt-4 text-[var(--muted)]">
+								Napisz lub zadzwoń. Odpowiadam spokojnie i konkretnie.
+							</p>
+						</div>
+						<div class="space-y-4 text-[var(--muted)]">
+							<div class="rounded-2xl border border-[var(--line)] bg-white/70 px-5 py-4">
+								<span class="text-xs uppercase tracking-[0.2em]">Telefon</span>
+								<p class="mt-2 text-lg text-[var(--ink)]">+48 600 000 000</p>
+							</div>
+							<div class="rounded-2xl border border-[var(--line)] bg-white/70 px-5 py-4">
+								<span class="text-xs uppercase tracking-[0.2em]">E-mail</span>
+								<p class="mt-2 text-lg text-[var(--ink)]">kontakt@nazwafirmy.pl</p>
+							</div>
+							<a
+								href="mailto:kontakt@nazwafirmy.pl"
+								class="inline-flex w-full items-center justify-center rounded-full bg-[var(--ink)] px-6 py-3 text-sm uppercase tracking-[0.2em] text-white transition hover:bg-black"
+							>
+								Napisz wiadomość
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="border-t border-[var(--line)] px-6 py-10 text-sm text-[var(--muted)]">
+			<div class="mx-auto flex max-w-6xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
+				<p>© 2026 NazwaFirmy. Wszystkie prawa zastrzeżone.</p>
+				<p>Śląsk • Katowice • Gliwice • Zabrze</p>
+			</div>
+		</footer>
 	</body>
 </html>

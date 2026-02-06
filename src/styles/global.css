@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f7f4ef;
+  --ink: #111111;
+  --muted: #5f5a54;
+  --accent: #b88a5a;
+  --line: #e7e1d8;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  --font-sans: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--paper);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #e6d7c4;
+}
